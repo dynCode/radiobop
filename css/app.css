@@ -1,0 +1,126 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 25, 2016, 2:45:10 PM
+    Author     : Llewellyn
+*/
+
+.page__background {
+    background-color: #000000;
+    background-image: url(../images/Black-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.app-logo {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.app-logo img{
+    filter: drop-shadow(2px 0px 0px #fff) drop-shadow(-2px 0px 0px #fff) drop-shadow(0px 2px 0px #fff) drop-shadow(0px -2px 0px #fff);
+}
+
+.forntPageBut {
+    background-color: #0b72af;
+    color: #fff;
+    box-shadow: 0 5px 10px -6px black;
+    border-right: 5px #ed7924 solid;
+    border-radius: 0px;
+    font-weight: bold;
+}
+
+.contactIcn {
+    border-color: #ed7924;
+    background-color: #ed7924;
+    height:50px;
+    width:50px;
+    line-height:50px;
+    color:#ffffff;
+    font-size:25px;
+    border-radius:50%;
+}
+
+.plan-list {
+  border-top: none;
+  background-image: none !important;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.plan {
+  line-height: 1;
+  padding: 0;
+}
+
+.plan-left {
+  text-align: right;
+  padding: 10px 10px 10px 0;
+}
+
+.plan-center {
+  background-color: #3399ff;
+  opacity: 0.5;
+}
+
+.plan-right {
+  padding: 10px 40px 10px 10px;
+}
+
+.plan-date {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.plan-duration {
+  font-size: 11px;
+  opacity: 0.4;
+}
+
+.plan-name {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.plan-info {
+  opacity: 0.4;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.contact-info {
+    background-color: #eeeeee;
+}
+
+.contact-info {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.contact-info img{
+    width: 100%;
+    max-width: 300px;
+}
+.contact-info p{
+    border-left: 4px solid #ED275B;
+    margin: -5px 0 10px 0;
+    padding: 10px;
+    font-weight: bold;
+    font-style: italic;
+    height: 50px;
+    vertical-align: middle;
+}
+
+.credits {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}

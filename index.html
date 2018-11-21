@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- CSP support mode (required for Windows Universal apps): https://docs.angularjs.org/api/ng/directive/ngCsp -->
+<html lang="en" ng-app="app" ng-csp>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+
+        <!-- JS dependencies (order matters!) -->
+        <script src="js/angular/angular.js"></script>
+        <script src="js/angular/sanitize.js"></script>
+        <script src="js/onsenui.js"></script>
+        <!--<script src="js/autocomplete.js"></script>-->
+        <script src="phonegap.js"></script>
+        <script src="js/app.js"></script> 
+        
+
+        <!-- CSS dependencies -->
+        <link rel="stylesheet" href="css/onsenui.css" />
+        <link rel="stylesheet" href="css/onsen-css-components.css" />
+        <!--<link rel="stylesheet" href="css/autocomplete.css">-->
+        <link rel="stylesheet" href="css/app.css" />
+
+        <!-- CSP support mode (required for Windows Universal apps) -->
+        <link rel="stylesheet" href="js/angular/angular-csp.css" />
+    </head>
+    <body ng-controller="AppController">   
+        <ons-navigator title="Navigator" var="myNavigator">
+            <ons-page>
+                <div class="app-logo">
+                    <img src="images/radio-bop-logo.png" />
+                </div>
+                <ons-button modifier="large" class="forntPageBut" ng-click="myNavigator.pushPage('luister.html', { animation : 'slide' } )">
+                    LISTEN NOW
+                </ons-button>
+                <br />
+                <!--
+                <ons-button modifier="large" class="forntPageBut" ng-click="playAudio()">
+                    LISTEN NOW (Cordova Media)
+                </ons-button>
+                <br />
+                <ons-button modifier="large" class="forntPageBut" onclick="cordova.InAppBrowser.open('http://radioinbox.co.za:8000/radiobop', '_blank', 'location=yes,allowInlineMediaPlayback=yes');">
+                    LISTEN NOW (In App Browser)
+                </ons-button>
+                <br />
+                
+                <ons-button modifier="large" class="forntPageBut" onclick="window.open('http://www.pretoriafm.co.za/luiterNou.html','_system','')" >
+                    LISTEN NOW (Android)
+                </ons-button>
+                <br />
+                -->
+                <ons-button modifier="large" class="forntPageBut" ng-click="myNavigator.pushPage('kontak.html', { animation : 'slide' } )">
+                    CONTACT US
+                </ons-button>
+                <br />
+                <div style="text-align: center; margin-top: 20px;">
+                    <a target="_blank" href="https://www.facebook.com/RadioBopSA/" ><img src="images/facebookIcn.png" /></a>
+                    <a target="_blank" href="https://twitter.com/RadioBopSA" ><img src="images/twitterIcn.png" /></a>
+                </div>
+                <div class="credits" style="text-align: center; margin-top: 20px;">
+                    <p><small style="color:#fff;font-size: 10px;">Designed and developed by </small> <img src="images/larapink.png" style="height: 10px;" onclick="window.open('http://dyncode.co.za/','_system','')" ></p>
+                </div>
+            </ons-page>
+        </ons-navigator>
+
+        <ons-template id="luister.html">
+            <ons-page>
+                <ons-toolbar>
+                    <div class="left">
+                        <ons-back-button>BACK</ons-back-button>
+                    </div>
+                    <div class="center">LISTEN NOW</div>
+                </ons-toolbar>
+                <div class="app-logo">
+                    <img src="images/radio-bop-logo.png" />
+                </div>
+                <div style="text-align: center">
+                    <audio autoplay preload="auto" controls src="http://radioinbox.co.za:8000/radiobop" id="audio"></audio>
+                </div>
+            </ons-page>
+        </ons-template>
+    
+        <ons-template id="kontak.html">
+            <ons-page>
+                <ons-toolbar>
+                    <div class="left">
+                        <ons-back-button>BACK</ons-back-button>
+                    </div>
+                    <div class="center">CONTACT US</div>
+                </ons-toolbar>
+                <div style="text-align: center">
+                    <iframe ng-src="{{mapURL}}" width="100%" height="450" frameborder="0" ></iframe>
+                    <p>&nbsp;</p>
+                    <a href="tel:+27127517608"><i class="fa fa-phone contactIcn"></i></a>
+                    <a href="mailto:info@radiobop.co.za"><i class="fa fa-envelope contactIcn"></i></a>
+                </div>
+            </ons-page>
+        </ons-template>
+    </body>
+</html>
