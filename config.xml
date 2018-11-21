@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.pretoriafm"
-        versionCode = "151" 
-        version   = "1.5.1">
+        id        = "com.radiobop"
+        versionCode = "100" 
+        version   = "1.0.0">
 
-    <name>Pretoria FM</name>
+    <name>Radio Bop</name>
 
     <description>
-        Pretoria FM - app. 
+        Radio Bop - app. 
         
-        Pretoria FM is ‘n gemeenskap-gebaseerde radiostasie gevestig in Pretoria, Suid-Afrika. Ons programme is gerig op Afrikaners wat passievol is oor musiek. Ons saai 24 uur per dag uit op 104.2 FM.
+        Once upon a time there was a Black urban contemporary Radio Station that gave birth to black excellence in radio. From its inception emerged an evolution of radio as it should be… Conversational, Educational, Entertaining and Enlightening. In the midst of apartheid, it grew like a Spanish rose that defied the pavement atop its seed.
     </description>
 
     <author href="http://www.myitmanager.co.za" email="support@myitmanager.co.za">
         My IT Manager
     </author>
-    <preference name="phonegap-version" value="cli-7.0.1" />
+    <preference name="phonegap-version" value="cli-8.0.0" />
     <platform name="ios" >
         <preference name="orientation" value="portrait" />
         <preference name="fullscreen" value="true" />  
@@ -26,35 +26,41 @@
         <preference name="exit-on-suspend" value="false" />  
         
         <!-- iOS 8.0+ -->
-        <!-- iPhone 6 Plus  -->
+        <!-- iPhone 6 / 6+ -->
         <icon src="res/icons/ios/icon-60@3x.png" width="180" height="180" />
-        <!-- iOS 7.0+ -->
+
         <!-- iPhone / iPod Touch  -->
         <icon src="res/icons/ios/icon-60.png" width="60" height="60" />
         <icon src="res/icons/ios/icon-60@2x.png" width="120" height="120" />
+
         <!-- iPad -->
         <icon src="res/icons/ios/icon-76.png" width="76" height="76" />
         <icon src="res/icons/ios/icon-76@2x.png" width="152" height="152" />
+        <icon src="res/icons/ios/icon-83.5@2x.png" width="167" height="167" />
+
+        <!-- Settings Icon -->
+        <icon src="res/icons/ios/icon-small.png" width="29" height="29" />
+        <icon src="res/icons/ios/icon-small@2x.png" width="58" height="58" />
+        <icon src="res/icons/ios/icon-small@3x.png" width="87" height="87" />
+        
         <!-- Spotlight Icon -->
         <icon src="res/icons/ios/icon-40.png" width="40" height="40" />
         <icon src="res/icons/ios/icon-40@2x.png" width="80" height="80" />
-        <!-- iOS 6.1 -->
+        <icon src="res/icons/ios/icon-40@3x.png" width="120" height="120" />
+
         <!-- iPhone / iPod Touch -->
-        <icon src="res/icons/ios/icon.png" width="57" height="57" />
+        <icon src="res/icons/ios/icon-57.png" width="57" height="57" />
         <icon src="res/icons/ios/icon@2x.png" width="114" height="114" />
+
         <!-- iPad -->
         <icon src="res/icons/ios/icon-72.png" width="72" height="72" />
         <icon src="res/icons/ios/icon-72@2x.png" width="144" height="144" />
-        <!-- iPad Pro -->
-        <icon src="res/icons/ios/icon-167.png" width="167" height="167" />
-        <!-- iPhone Spotlight and Settings Icon -->
-        <icon src="res/icons/ios/icon-small.png" width="29" height="29" />
-        <icon src="res/icons/ios/icon-small@2x.png" width="58" height="58" />
+
         <!-- iPad Spotlight and Settings Icon -->
         <icon src="res/icons/ios/icon-50.png" width="50" height="50" />
         <icon src="res/icons/ios/icon-50@2x.png" width="100" height="100" />
-        <!-- iPad Pro -->
-        <icon src="res/icons/ios/icon-83.5@2x.png" width="167" height="167" />
+        
+        <icon src="res/icons/ios/icon.png" width="1024" height="1024" />
         <config-file platform="ios" target="*-Info.plist" parent="UIBackgroundModes">
             <array>
                 <string>audio</string>
