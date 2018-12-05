@@ -155,7 +155,11 @@ and open the template in the editor.
     position: absolute;
     top: 70%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
 
 .pp-card {
@@ -174,7 +178,11 @@ and open the template in the editor.
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
 
 .play-but {
@@ -188,7 +196,11 @@ and open the template in the editor.
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
 
 .pause-but {
@@ -202,7 +214,11 @@ and open the template in the editor.
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
 
 .pp-control.inactive, .pp-control.active {
@@ -368,7 +384,10 @@ input[type=range]:focus::-ms-fill-upper {
 
 .alert-dialog.ng-scope {
     width: 100% !important;
+	max-height: 85vh;
 }
 .alert-dialog-content {
     text-align: left !important;
+	max-height: 70vh;
+	overflow: auto;
 }
