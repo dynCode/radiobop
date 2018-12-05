@@ -13,6 +13,7 @@
         <!--<script src="js/autocomplete.js"></script>-->
         <script src="phonegap.js"></script>
         <script src="js/app.js"></script> 
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
         
 
         <!-- CSS dependencies -->
@@ -30,10 +31,14 @@
                 <div class="app-logo">
                     <img src="images/radio-bop-logo.png" />
                 </div>
-                <ons-button modifier="large" class="forntPageBut" ng-click="myNavigator.pushPage('luister.html', { animation : 'slide' } )">
+                <ons-button modifier="large" class="forntPageBut" ng-click="myNavigator.pushPage('listen.html', { animation : 'slide' } )">
                     LISTEN NOW
                 </ons-button>
                 <br />
+				<ons-button modifier="large" class="forntPageBut" ng-click="myNavigator.pushPage('djs.html', { animation : 'slide' } )">
+                    DJ's
+                </ons-button>
+				<br/>
                 <!--
                 <ons-button modifier="large" class="forntPageBut" ng-click="playAudio()">
                     LISTEN NOW (Cordova Media)
@@ -49,7 +54,7 @@
                 </ons-button>
                 <br />
                 -->
-                <ons-button modifier="large" class="forntPageBut" ng-click="myNavigator.pushPage('kontak.html', { animation : 'slide' } )">
+                <ons-button modifier="large" class="forntPageBut" ng-click="myNavigator.pushPage('contact.html', { animation : 'slide' } )">
                     CONTACT US
                 </ons-button>
                 <br />
@@ -63,30 +68,43 @@
             </ons-page>
         </ons-navigator>
 
-        <ons-template id="luister.html">
+        <ons-template id="listen.html">
             <ons-page>
-                <ons-toolbar>
+                <ons-toolbar fixed-style>
                     <div class="left">
                         <ons-back-button>BACK</ons-back-button>
                     </div>
                     <div class="center">LISTEN NOW</div>
+					<div class="right"></div>
                 </ons-toolbar>
-                <div class="app-logo">
-                    <img src="images/radio-bop-logo.png" />
+                <div class="app-logo-sml">
+                    <img src="images/radio-bop-logo-sml.png" />
                 </div>
-                <div style="text-align: center">
-                    <audio autoplay preload="auto" controls src="http://radioinbox.co.za:8000/radiobop" id="audio"></audio>
-                </div>
+				<audio id="radio-box" preload="auto" volume="1.0" src="http://s7.voscast.com:10246/;stream1542954302677/1" ></audio>
+				<div class="player-container">
+					<div class="pp-card">
+						<div id="but-play" class="pp-control front active" onclick="togglePlay()">
+							<a href="#" onclick="playAudio();" class="play-but"><img src="images/play-solid.svg"/></a>
+						</div>
+						<div id="but-pause" class="pp-control back inactive" onclick="togglePlay()">
+							<a href="#" onclick="pauseAudio();" class="pause-but"><img src="images/pause-solid.svg"/></a>
+						</div>
+					</div>
+					<div id="volume">
+						<input id="vol-control" type="range" min="0" max="100" step="1" value="100" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)"></input>
+					</div>
+				</div>
             </ons-page>
         </ons-template>
     
-        <ons-template id="kontak.html">
+        <ons-template id="contact.html">
             <ons-page>
-                <ons-toolbar>
+                <ons-toolbar fixed-style>
                     <div class="left">
                         <ons-back-button>BACK</ons-back-button>
                     </div>
                     <div class="center">CONTACT US</div>
+					<div class="right"></div>
                 </ons-toolbar>
                 <div style="text-align: center">
                     <iframe ng-src="{{mapURL}}" width="100%" height="450" frameborder="0" ></iframe>
@@ -95,6 +113,32 @@
                     <a href="mailto:info@radiobop.co.za"><i class="fa fa-envelope contactIcn"></i></a>
                 </div>
             </ons-page>
+        </ons-template>
+		
+		<ons-template id="djs.html">
+            <ons-page>
+                <ons-toolbar fixed-style>
+                    <div class="left">
+                        <ons-back-button>BACK</ons-back-button>
+                    </div>
+                    <div class="center">DJ'S</div>
+					<div class="right"></div>
+                </ons-toolbar>
+				<div class="app-logo-sml">
+                    <img src="images/radio-bop-logo-sml.png" />
+                </div>
+				<ons-row>
+					<ons-col width="50%" class="dj-card" ng-repeat="dj in djs | orderBy:'DJname'">
+						<div class="dj-inner">
+							<div class="dj-img"><img src="{{dj.DJphoto}}" alt="{{dj.DJname}}" /></div>
+							<div class="dj-name">{{dj.DJname}}</div>
+							<ons-button modifier="large" class="djPageBut" ng-click="djBio(dj)">
+								Read BIO
+							</ons-button>
+						</div>
+					</ons-col>
+				</ons-row>
+			</ons-page>
         </ons-template>
     </body>
 </html>
