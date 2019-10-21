@@ -16,7 +16,7 @@
     <author href="http://www.myitmanager.co.za" email="support@myitmanager.co.za">
         My IT Manager
     </author>
-    <preference name="phonegap-version" value="cli-8.0.0" />
+    <preference name="phonegap-version" value="cli-9.0.0" />
     <platform name="ios" >
         <preference name="orientation" value="portrait" />
         <preference name="fullscreen" value="true" />  
