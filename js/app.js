@@ -32,15 +32,15 @@
 		
 		$http.post(apiURL)
 		.then(function(data){
-			console.log("Data: ", data);
+			//console.log("Data: ", data);
 			$scope.djs = data.data;
-			console.log("Scope data:", $scope.djs);
+			//console.log("Scope data:", $scope.djs);
 		},function(data) {
 			console.log("Func Data:", data);
 		});
 		
 		$scope.djBio = function (dj, event) {
-			console.log("DJ Bio: ", dj);
+			//console.log("DJ Bio: ", dj);
 			ons.notification.alert({buttonLabels:'Close',title:dj.DJname,messageHTML:dj.DJinfo,animation: 'default'});
 		};
     });
