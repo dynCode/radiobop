@@ -62,22 +62,25 @@
                     <div class="center">LISTEN NOW</div>
 					<div class="right"></div>
                 </ons-toolbar>
-                <div class="app-logo-sml">
-                    <img src="images/radio-bop-logo-sml.png" />
+                <div class="app-logo">
+                    <img src="images/radio-bop-logo.png" />
                 </div>
-				<audio id="radio-box" preload="auto" volume="1.0" src="http://live.urbanza.co.za/radio/8020/radiobop?1565862890" ></audio>
-				<div class="player-container">
-					<div class="pp-card">
-						<div id="but-play" class="pp-control front active" onclick="togglePlay()">
-							<a href="#" onclick="playAudio();" class="play-but"><img src="images/play-solid.svg"/></a>
+				<div id="streamPlayer">
+					<!--<audio id="radio-box" preload="auto" volume="1.0" src="http://live.urbanza.co.za/radio/8020/radiobop?1565862890" ></audio>-->
+					<audio autoplay="autoplay" controls="controls" volume="1.0"><source src="http://live.urbanza.co.za/radio/8020/radiobop?1567599221"></audio>
+					<!--<div class="player-container">
+						<div class="pp-card">
+							<div id="but-play" class="pp-control front active" onclick="togglePlay()">
+								<a href="#" onclick="playAudio();" class="play-but"><img src="images/play-solid.svg"/></a>
+							</div>
+							<div id="but-pause" class="pp-control back inactive" onclick="togglePlay()">
+								<a href="#" onclick="pauseAudio();" class="pause-but"><img src="images/pause-solid.svg"/></a>
+							</div>
 						</div>
-						<div id="but-pause" class="pp-control back inactive" onclick="togglePlay()">
-							<a href="#" onclick="pauseAudio();" class="pause-but"><img src="images/pause-solid.svg"/></a>
+						<div id="volume">
+							<input id="vol-control" type="range" min="0" max="100" step="1" value="100" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)"></input>
 						</div>
-					</div>
-					<div id="volume">
-						<input id="vol-control" type="range" min="0" max="100" step="1" value="100" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)"></input>
-					</div>
+					</div>-->
 				</div>
             </ons-page>
         </ons-template>

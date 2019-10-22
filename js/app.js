@@ -12,7 +12,7 @@
         $scope.errorCode = '';
         
         $scope.playAudio = function() {
-            var audioUrl = "http://radioinbox.co.za:8000/radiobop";
+            var audioUrl = "http://live.urbanza.co.za/radio/8020/radiobop?1565862890";
 
             // Play the audio file at url
             var my_media = new Media(audioUrl,
@@ -63,7 +63,7 @@ document.addEventListener('deviceready', function () {
         cordova.plugins.backgroundMode.disableWebViewOptimizations(); 
     });
 }, false);
-
+/*
 function playAudio() {
 	var control = document.getElementById("radio-box");
     control.play();
@@ -98,3 +98,4 @@ function togglePlay() {
 		pause.remove("inactive");
 	}
 }
+*/
